@@ -14,11 +14,11 @@
             $senha = $_POST['senha'];
 
             if($nome == '')
-                $errMsg = 'Enter your nome';
+                $errMsg = 'Preencha seu nome';
             if($email == '')
-                $errMsg = 'Enter email';
+                $errMsg = 'Preencha seu email';
             if($senha == '')
-                $errMsg = 'Enter senha';
+                $errMsg = 'Preencha sua senha';
             if($errMsg == ''){
                 try {
                     $stmt = $connect->prepare('INSERT INTO usuario (nome, email, tel_contato, senha) VALUES (:nome, :email, :tel_contato, :senha)');
@@ -37,7 +37,7 @@
         }
 
         if(isset($_GET['action']) && $_GET['action'] == 'joined') {
-            $errMsg = 'Registration successfull. Now you can <a href="entrar.php">login</a>';
+            print('<meta http-equiv="refresh" content="0;url=entrar.php">');
         }
     ?>
 
@@ -47,7 +47,16 @@
         }
     ?>
 
-       <form action="cadastrar.php" method="post" post="register" class="ui form" style="margin-left: 28%; margin-right: 28%; margin-top: 12%; background-color: #C0C0C0; padding: 4%; border-radius: 20px;">
+    <style type="text/css">
+        body{
+            background-image: url(images/background_quatro.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 30%;
+        }
+    </style>
+
+       <form action="cadastrar.php" method="post" post="register" class="ui form" style="margin-left: 28%; margin-right: 28%; margin-top: 5%; background-color: #C0C0C0; padding: 5%; border-radius: 20px; opacity: 0.9;">
             <div class="field">
                 <label>Nome Completo</label>
                 <input type="text" name="nome" placeholder="Nome" autocomplete="off" class="box"/><br/>
@@ -64,12 +73,7 @@
                 <label>Senha</label>
                 <input type="password" name="senha" placeholder="Senha" class="box" /><br/>
             </div>
-            <div class="field">
-                <div class="ui checkbox">
-                    <input type="checkbox" tabindex="0" class="hidden">
-                    <label>I agree to the Terms and Conditions</label>
-                </div>
-            </div>
+            
             <input action="joined" class="ui button submit" type="submit" style="background-color: black; color: white;" name="register" value="register"></input>
         </form>
         

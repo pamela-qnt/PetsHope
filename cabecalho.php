@@ -50,7 +50,7 @@
   <div class="ui inverted vertical masthead center aligned segment">
 
     <div class="ui container" style="width: 80%; ">
-      <div class="ui large secondary inverted pointing menu" style="margin-top: -1%;">
+      <div class="ui large secondary inverted pointing menu" style="margin-top: -2%;">
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
@@ -59,8 +59,23 @@
         <a class="item">Company</a>
         <a class="item">Careers</a>
         <div class="right item">
-			<div><a class="ui inverted button" href="entrar.php">Log in</a></div>
-			<div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
+            <?php 
+                if(!isset($_SESSION['id_usuario'])){ 
+            ?>
+
+                <div><a class="ui inverted button" href="entrar.php">Log in</a></div>
+                <div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
+
+            <?php
+                }else{
+                    echo "Olá! " . $_SESSION['nome'];
+            ?>
+                <div><a class="ui inverted button" href="logout.php">Sair</a></div>
+                
+            <?php
+                }
+            ?>
+            
         </div>
       </div>
     </div>
