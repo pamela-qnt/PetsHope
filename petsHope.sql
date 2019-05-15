@@ -15,14 +15,12 @@ descricao varchar(80)
 
 CREATE TABLE compra (
 id_compra  int(8) AUTO_INCREMENT PRIMARY KEY,
-comprador int(8) NOT NULL,
-produtos int(8) NOT NULL,
+id_comprador int(8),
 numero_cartao int(16) NOT NULL,
 codigo_seguranca int(3) NOT NULL,
-agencia varchar(20) NOT NULL,
-nome_dono_cartao varchar(50) NOT NULL,
 validade date NOT NULL,
-id_produto int(8) NOT NULL
+id_produto int(8),
+FOREING KEY(id_comprador) REFERENCES usuario (id_usuario)
 ); 
 
 CREATE TABLE usuario (
@@ -51,11 +49,13 @@ id_produto  int(8) AUTO_INCREMENT PRIMARY KEY,
 nome_produto varchar(50) NOT NULL, 
 descricao varchar(80),
 preco decimal(6) NOT NULL,
-qtd_produto_est int(4) NOT NULL
+qtd_produto_est int(4) NOT NULL,
+img_produto varchar(100)
 );
 
 ALTER TABLE compra ADD FOREIGN KEY(id_produto ) REFERENCES produtos (id_produto);
 ALTER TABLE usuario_admin ADD FOREIGN KEY(id_produto ) REFERENCES produtos (id_produto);
+
 
 
 
@@ -77,12 +77,30 @@ insert into produtos (nome_produto, preco, qtd_produto_est) values
 ('Comedouro para cachorros Zee.Bowl Branco', 70.00, 4);
 
 insert into usuario (nome, email, tel_contato, senha) values
-('Anna Morais', 'annafmmorais@gmail.com', 997160345, 12345678),
-('Pamela Quint', 'pamela.quint.ifc@gmail.com', 997773555, 12345678), 
 ('Gabriel Báo', 'gabbao63oli@gmail.com', 984744159, 87654321),
-('Amábile Kniss', 'amabilekniss1@gmail.com', 997363660, 76543210);
+('Amábile Kniss', 'amabilekniss1@gmail.com', 997363660, 76543210),
+('Michael L. Deluna', 'MichaelLDeluna@armyspy.com', 25223344, 'iugh9XohT'), 
+('Carla Castro Alves', 'CarlaCastroAlves@teleworm.us', 51356843, 'iSaey9itoo'),
+('Diogo Ribeiro Carvalho', 'DiogoRibeiroCarvalho@dayrep.com',  78696077, 'Eeb8JieG3eZ'),
+('Sarah Dias Alves', 'SarahDiasAlves@armyspy.com', 51908989, 'oaj8Aeyie'),
+('Gabrielly Almeida Souza', 'GabriellyAlmeidaSouza@dayrep.com', 54908442);
 
 
+insert into usuario_admin (nome_adm, senha) values 
+('Anna Morais', 12345678),
+('Pamela Quint',12345678);
+
+insert into compra (numero_cartao, codigo_seguranca, validade) values 
+(4508 9984 8857 4231, 208, 12/2022),
+(4916 6805 3836 3163, 562, 12/2020), 
+(5591 9374 2956 1217, 904, 03/2020),
+(5168 1069 9527 0776, 587, 02/2022), 
+(5546 1846 0161 7618, 697, 05/2020), 
+(5296 6632 6278 6533, 728, 03/2024), 
+(4929 8514 4570 9211, 141, 04/2023), 
+(4916 9314 5771 0581, 968, 10/2020), 
+(5336 2664 5619 3490, 661, 10/2024), 
+(4916 7944 3065 5152, 050, 05/2020);
 
 
 

@@ -55,9 +55,9 @@
           <i class="sidebar icon"></i>
         </a>
         <a href="index.php" class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Company</a>
-        <a class="item">Careers</a>
+        <a class="item">Produtos</a>
+        <a class="item">Adoção</a>
+        <a class="item">Perfil</a>
         <div class="right item">
             <?php 
                 if(!isset($_SESSION['id_usuario'])){ 
@@ -66,12 +66,12 @@
                 <div><a class="ui inverted button" href="entrar.php">Log in</a></div>
                 <div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
 
+
             <?php
                 }else{
                     echo "Olá! " . $_SESSION['nome'];
             ?>
-                <div><a class="ui inverted button" href="logout.php">Sair</a></div>
-                
+                <a class="item" href="logout.php">Sair</a>
             <?php
                 }
             ?>

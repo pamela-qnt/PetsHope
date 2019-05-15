@@ -50,10 +50,10 @@
             <a class="toc item">
               <i class="sidebar icon"></i>
             </a>
-            <a class="active item">Home</a>
-            <a class="item">Work</a>
-            <a class="item">Company</a>
-            <a class="item">Careers</a>
+            <a href="index.php" class="active item">Home</a>
+            <a class="item">Produtos</a>
+            <a class="item">Adoção</a>
+            <a class="item">Perfil</a>
             <div class="right item">
             <?php 
                 if(!isset($_SESSION['id_usuario'])){ 
@@ -66,7 +66,7 @@
                 }else{
                     echo "Olá! " . $_SESSION['nome'];
             ?>
-                <a href="logout.php">   Sair</a>
+                 <a class="item" href="logout.php">Sair</a>
             <?php
                 }
             ?>
@@ -74,4 +74,45 @@
           </div>
         </div>
       </div>  
+
+
+      <div class="ui small image" style="width: 25%;"> 
+         <img src="images/index.jpeg">
+      </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="#" class="item">Contact Us</a>
+            <a href="#" class="item">Religious Ceremonies</a>
+            <a href="#" class="item">Gazebo Plans</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Banana Pre-Order</a>
+            <a href="#" class="item">DNA FAQ</a>
+            <a href="#" class="item">How To Access</a>
+            <a href="#" class="item">Favorite X-Men</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
     </body>
