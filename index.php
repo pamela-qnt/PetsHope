@@ -77,21 +77,19 @@
 
       <tr> <!--linha-->
         <td> <!--coluna-->
-          <div class="ui small image" style="width: 30%;"> 
+          <div class="ui small image" style="width: 30%; margin-top: 3%; margin-left: 3%; margin-bottom: 3%; margin-right: 3%;"> 
              <img src="images/index.jpeg">
           </div>
         </td> 
-        <td>
-          <div class="ui small image" style="width: 35%; margin-left: -2px; margin-top: -220px "> 
-             <img src="images/cachorro2.jpeg">
-          </div>
-        </td>
+        
         <td> <!--coluna-->
-          <div class="ui small image" style="width: 30%;"> 
-             <img src="images/index.jpeg">
+          <div class="ui small image" style="width: 30%; margin-bottom: 3%; width: 60%; margin-bottom: 1%"> 
+             <img src="images/dogs.jpg">
           </div>
         </td>   
       </tr>
+
+
 
   <div class="ui inverted vertical footer segment">
     <div class="ui container">
