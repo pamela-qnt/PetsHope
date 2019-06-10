@@ -20,7 +20,7 @@
     <script src="../dist/components/sidebar.js"></script>
     <script src="../dist/components/transition.js"></script>
     <script>
-    
+        
         $(document).ready(function() {
 
           // fix menu when passed
@@ -39,11 +39,11 @@
                 .sidebar('attach events', '.toc.item')
             ;
 
-        });
+            });
     </script>
 
     <div class="pusher" >
-      <div class="ui inverted vertical masthead center aligned segment" style="padding-bottom: 38%; background-image: url(images/caroussel.jpg); background-repeat: no-repeat;">
+      <div class="ui inverted vertical masthead center aligned segment cabecalho" style="padding-bottom: 38%; background-image: url(images/caroussel.jpg); background-repeat: no-repeat;">
 
         <div class="ui container" style="width: 80%; ">
           <div class="ui large secondary inverted pointing menu" style="margin-top: -1%;">
@@ -64,9 +64,42 @@
 
             <?php
                 }else{
-                    echo "Olá! " . $_SESSION['nome'];
             ?>
-                 <a class="item" href="logout.php">Sair</a>
+                    <div class="ui icon top left simple dropdown">
+                        <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
+                            <h5 style="float: right;">
+                                <?php
+                                    echo $_SESSION['nome'];
+                                ?>
+                            </h5>
+                        </i>
+                        <div class="menu">
+                            <div class="header">Display Density</div>
+                            <div class="item">Comfortable</div>
+                            <div class="item">Cozy</div>
+                            <div class="item">Compact</div>
+                            <div class="ui divider"></div>
+                            <div class="item">Settings</div>
+                            <div class="item">
+                                <i class="dropdown icon"></i>
+                                <span class="text">Upload Settings</span>
+                                <div class="menu">
+                                    <div class="item">
+                                        <i class="check icon"></i>
+                                        Convert Uploaded Files to PDF
+                                    </div>
+                                    <div class="item">
+                                        <i class="check icon"></i>
+                                        Digitize Text from Uploaded Files
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">Manage Apps</div>
+                            <div class="item">Keyboard Shortcuts</div>
+                            <div class="item">Help</div>
+                            <a class="item" href="logout.php">Sair</a>
+                        </div>
+                    </div>
             <?php
                 }
             ?>
@@ -74,56 +107,58 @@
           </div>
         </div>
       </div>  
-
-      <tr> <!--linha-->
-        <td> <!--coluna-->
-          <div class="ui small image" style="width: 30%; margin-top: 3%; margin-left: 3%; margin-bottom: 3%; margin-right: 3%;"> 
-             <img src="images/index.jpeg">
+  
+  <div class="ui grid" style="margin-top: 1%; margin-bottom: 1%;">
+  <div class="four wide column">
+      <div class="ui card" style="margin-left: 3%">
+        <div class="ui move reveal image">
+          <div class="visible content">
+            <img class="ui fluid image" src="images/cachorro_index.jpeg" style="width: 30%">
           </div>
-        </td> 
-        
-        <td> <!--coluna-->
-          <div class="ui small image" style="width: 30%; margin-bottom: 3%; width: 60%; margin-bottom: 1%"> 
-             <img src="images/dogs.jpg">
+          <div class="hidden content">
+            <img class="ui fluid image" src="images/cachorro2.jpeg">
           </div>
-        </td>   
-      </tr>
-
-
-
-  <div class="ui inverted vertical footer segment">
-    <div class="ui container">
-      <div class="ui stackable inverted divided equal height stackable grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">About</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Sitemap</a>
-            <a href="#" class="item">Contact Us</a>
-            <a href="#" class="item">Religious Ceremonies</a>
-            <a href="#" class="item">Gazebo Plans</a>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui card" style="margin-left: 3%">
+        <div class="ui move reveal image">
+          <div class="visible content">
+            <img class="ui fluid image" src="images/dogs.jpg">
           </div>
-        </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Services</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Banana Pre-Order</a>
-            <a href="#" class="item">DNA FAQ</a>
-            <a href="#" class="item">How To Access</a>
-            <a href="#" class="item">Favorite X-Men</a>
+          <div class="hidden content">
+            <img class="ui fluid image" src="images/dogs.jpg">
           </div>
-        </div>
-        <div class="seven wide column">
-          <h4 class="ui inverted header">Footer Header</h4>
-          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-        </div>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui card" style="margin-left: 3%">
+        <div class="ui move reveal image">
+          <div class="visible content">
+            <img class="ui fluid image" src="images/dogs.jpg">
+          </div>
+          <div class="hidden content">
+            <img class="ui fluid image" src="images/dogs.jpg">
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui card" style="margin-left: 3%">
+        <div class="ui move reveal image">
+          <div class="visible content">
+            <img class="ui fluid image" src="images/dogs.jpg">
+          </div>
+          <div class="hidden content">
+            <img class="ui fluid image" src="images/dogs.jpg">
+          </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-</body>
-
-</html>
-    </body>
+<?php
+    include 'rodape.php';
+?>

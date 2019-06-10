@@ -1,3 +1,6 @@
+<?php
+    require 'config.php';
+?>
 <!DOCTYPE html>
   <html>
     <head>
@@ -36,18 +39,16 @@
       ;
 
       // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
+        $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item');
+            })
+        ; 
   </script>
 
 
 
 <div class="pusher" >
-  <div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui inverted vertical masthead center aligned segment cabecalho">
 
     <div class="ui container" style="width: 80%; ">
       <div class="ui large secondary inverted pointing menu" style="margin-top: -2%;">
@@ -80,11 +81,3 @@
       </div>
     </div>
   </div>
-
-  
-</body>
-
-
-
-
-
