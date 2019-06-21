@@ -74,9 +74,6 @@
                 <input type="password" name="senha" placeholder="Senha" class="box" /><br/>
             </div>
             
-            <input action="joined" class="ui button submit" type="submit" style="background-color: black; color: white;" name="register" value="register"></input>
+            <input action="joined" class="ui button submit" type="submit" style="background-color: black; color: white;" name="register" value="cadastrar"></input>
         </form>
-        
-<?php
-    include("rodape.php");
-?>
+

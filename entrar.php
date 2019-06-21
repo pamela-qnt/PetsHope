@@ -1,6 +1,7 @@
 <?php
-    require 'config.php';
     include("cabecalho.php");
+    require 'config.php';
+    
 
         if(isset($_POST['login'])) {
         $errMsg = '';
@@ -71,6 +72,4 @@
             <input class="ui button submit" type="submit" style="background-color: black; color: white;" name="login" value="Login"></input>
         </form> 
         
-<?php
-    include("rodape.php");
-?>
+

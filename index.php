@@ -19,39 +19,17 @@
     <script src="../dist/components/visibility.js"></script>
     <script src="../dist/components/sidebar.js"></script>
     <script src="../dist/components/transition.js"></script>
-    <script>
-        
-        $(document).ready(function() {
-
-          // fix menu when passed
-            $('.masthead').visibility({
-                once: false,
-                onBottomPassed: function() {
-                    $('.fixed.menu').transition('fade in');
-                },
-                onBottomPassedReverse: function() {
-                    $('.fixed.menu').transition('fade out');
-                }
-            });
-
-          // create sidebar and attach to menu open
-            $('.ui.sidebar')
-                .sidebar('attach events', '.toc.item')
-            ;
-
-            });
-    </script>
-
+  
     <div class="pusher" >
-      <div class="ui inverted vertical masthead center aligned segment cabecalho" style="padding-bottom: 38%; background-image: url(images/caroussel.jpg); background-repeat: no-repeat;">
+      <div class="ui inverted vertical masthead center aligned segment cabecalho" style="padding-bottom: 38%; background-image: url(images/happy.jpg); background-repeat: no-repeat; ">
 
         <div class="ui container" style="width: 80%; ">
-          <div class="ui large secondary inverted pointing menu" style="margin-top: -1%;">
+          <div class="ui large secondary inverted pointing menu" style="margin-top: -2%;">
             <a class="toc item">
               <i class="sidebar icon"></i>
             </a>
             <a href="index.php" class="active item">Home</a>
-            <a class="item">Produtos</a>
+            <a class="item" href="index (cópia).php">Produtos</a>
             <a class="item">Adoção</a>
             <a class="item">Perfil</a>
             <div class="right item">
@@ -108,56 +86,80 @@
         </div>
       </div>  
   
-  <div class="ui grid" style="margin-top: 1%; margin-bottom: 1%;">
-  <div class="four wide column">
-      <div class="ui card" style="margin-left: 3%">
-        <div class="ui move reveal image">
-          <div class="visible content">
-            <img class="ui fluid image" src="images/cachorro_index.jpeg" style="width: 30%">
-          </div>
-          <div class="hidden content">
-            <img class="ui fluid image" src="images/cachorro2.jpeg">
-          </div>
-      </div>
+  
+
+<div class="ui four cards" style="margin-top: 5%; margin-left: 5%; margin-bottom: 5%">
+  <div class="ui card">
+    <div class="image">
+      <img src="images/utilitarios.webp" >
     </div>
-  </div>
-  <div class="four wide column">
-    <div class="ui card" style="margin-left: 3%">
-        <div class="ui move reveal image">
-          <div class="visible content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
-          <div class="hidden content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
+    <div class="content">
+      <div class="header">Comedouros</div>
+      <div class="meta">
+        <a class="group">Ver mais</a>
       </div>
+      <div class="description">Comedouros versáteis, úteis e lindos para seu animal, confira mais produtos como este em nosso site!</div>
     </div>
-  </div>
-  <div class="four wide column">
-    <div class="ui card" style="margin-left: 3%">
-        <div class="ui move reveal image">
-          <div class="visible content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
-          <div class="hidden content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="four wide column">
-    <div class="ui card" style="margin-left: 3%">
-        <div class="ui move reveal image">
-          <div class="visible content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
-          <div class="hidden content">
-            <img class="ui fluid image" src="images/dogs.jpg">
-          </div>
-      </div>
-    </div>
+    <div class="extra content">
+
+
+      <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
+  <div class="visible content">12.99</div>
+  <div class="hidden content">
+   Adicionar ao Carrinho
   </div>
 </div>
+    </div>
+  </div>
+
+   <div class="ui card" style="margin-left: 7%">
+    <div class="image">
+      <img src="images/acessorios.png">
+    </div>
+    <div class="content">
+      <div class="header">Acessórios</div>
+      <div class="meta">
+        <a class="group">Ver mais</a>
+      </div>
+      <div class="description">Deixe seu animal com seu estilo!</div>
+    </div>
+    <div class="extra content">
+      <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
+  <div class="visible content">12.99</div>
+  <div class="hidden content">
+   Adicionar ao Carrinho
+  </div>
+</div>
+    </div>
+  </div>
+
+  <div class="ui card" style="margin-left: 7%">
+    <div class="image">
+      <img src="images/brinquedos.jpg">
+    </div>
+    <div class="content">
+      <div class="header">Brinquedos</div>
+      <div class="meta">
+        <a class="group">Meta</a>
+      </div>
+      <div class="description">One or two sentence description that may go to several lines</div>
+    </div>
+    <div class="extra content">
+           <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
+  <div class="visible content">12.99</div>
+  <div class="hidden content">
+   Adicionar ao Carrinho
+  </div>
+</div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
 
 <?php
     include 'rodape.php';

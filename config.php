@@ -3,8 +3,8 @@
 
 	// Definições da base de dados
 	define('dbhost', 'localhost');
-	define('dbuser', 'aluno');
-	define('dbpass', 'aluno');
+	define('dbuser', 'root');
+	define('dbpass', '');
 	define('dbname', 'petsHope');
 
 	// Conectando a base de dados (MySQL)
