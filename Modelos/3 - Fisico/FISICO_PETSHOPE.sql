@@ -16,8 +16,7 @@ id_produto int(11) PRIMARY KEY AUTO_INCREMENT,
 qtd_estoque int(11),
 desc_produto varchar(300),
 valor decimal(10,2),
-desc_tipo_prod varchar(50),
-FOREIGN KEY (desc_tipo_prod) REFERENCES tipo_produto (id_tipo_prod)
+desc_tipo_prod varchar(50)
 );
 
 CREATE TABLE animal (
@@ -47,8 +46,7 @@ nome_usuario varchar(100),
 email varchar(100),
 tel_contato int(11),
 senha varchar(50),
-desc_tipo_usuario varchar(50),
-FOREIGN KEY(desc_tipo_usuario varchar) REFERENCES tipo_usuario (id_tipo_usuario)
+desc_tipo_usuario varchar(50)
 );
 
 CREATE TABLE tipo_produto (
