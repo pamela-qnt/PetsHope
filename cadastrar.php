@@ -8,7 +8,7 @@
             $errMsg = '';
 
             // Get data from FROM
-            $nome = $_POST['nome'];
+            $nome = $_POST['nome_usuario'];
             $email = $_POST['email'];
             $tel_contato = $_POST['tel_contato'];
             $senha = $_POST['senha'];
@@ -21,9 +21,9 @@
                 $errMsg = 'Preencha sua senha';
             if($errMsg == ''){
                 try {
-                    $stmt = $connect->prepare('INSERT INTO usuario (nome, email, tel_contato, senha) VALUES (:nome, :email, :tel_contato, :senha)');
+                    $stmt = $connect->prepare('INSERT INTO usuario (nome_usuario, email, tel_contato, senha) VALUES (:nome_usuario, :email, :tel_contato, :senha)');
                     $stmt->execute(array(
-                        ':nome' => $nome,
+                        ':nome_usuario' => $nome,
                         ':email' => $email,
                         ':tel_contato' => $tel_contato,
                         ':senha' => $senha                    ));
@@ -59,7 +59,7 @@
        <form action="cadastrar.php" method="post" post="register" class="ui form" style="margin-left: 28%; margin-right: 28%; margin-top: 5%; background-color: #C0C0C0; padding: 5%; border-radius: 20px; opacity: 0.9;">
             <div class="field">
                 <label>Nome Completo</label>
-                <input type="text" name="nome" placeholder="Nome" autocomplete="off" class="box"/><br/>
+                <input type="text" name="nome_usuario" placeholder="Nome" autocomplete="off" class="box"/><br/>
             </div>
             <div class="field">
                 <label>Email</label>

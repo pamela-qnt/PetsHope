@@ -17,7 +17,7 @@
 
         if($errMsg == '') {
             try {
-                $stmt = $connect->prepare('SELECT id_usuario, nome, email, tel_contato, senha FROM usuario WHERE email = :email');
+                $stmt = $connect->prepare('SELECT id_usuario, nome_usuario, email, tel_contato, senha FROM usuario WHERE email = :email');
                 $stmt->execute(array(
                     ':email' => $email
                     ));
@@ -29,7 +29,7 @@
                 else {
                     if($senha == $data['senha']) {
                         $_SESSION['id_usuario'] = $data['id_usuario'];
-                        $_SESSION['nome'] = $data['nome'];
+                        $_SESSION['nome_usuario'] = $data['nome_usuario'];
                         $_SESSION['email'] = $data['email'];
                         $_SESSION['senha'] = $data['senha'];
                         header('Location: index.php');

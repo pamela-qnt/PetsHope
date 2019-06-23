@@ -47,7 +47,7 @@
                         <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
                             <h5 style="float: right;">
                                 <?php
-                                    echo $_SESSION['nome'];
+                                    echo $_SESSION['nome_usuario'];
                                 ?>
                             </h5>
                         </i>

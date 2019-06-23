@@ -5,7 +5,7 @@
 	define('dbhost', 'localhost');
 	define('dbuser', 'root');
 	define('dbpass', '');
-	define('dbname', 'petsHope');
+	define('dbname', 'petshope');
 
 	// Conectando a base de dados (MySQL)
 	try {
