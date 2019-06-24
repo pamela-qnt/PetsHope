@@ -58,26 +58,37 @@
         <a href="index.php" class="active item">Home</a>
         <a class="item">Produtos</a>
         <a class="item">Adoção</a>
-        <a class="item">Perfil</a>
         <div class="right item">
-            <?php 
+             <?php 
                 if(!isset($_SESSION['id_usuario'])){ 
             ?>
 
                 <div><a class="ui inverted button" href="entrar.php">Log in</a></div>
                 <div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
 
-
             <?php
                 }else{
-                    echo "Olá! " . $_SESSION['nome'];
             ?>
-                <a class="item" href="logout.php">Sair</a>
+                    <div class="ui icon top left simple dropdown">
+                        <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
+                            <h5 style="float: right;">
+                                <?php
+                                    echo $_SESSION['nome_usuario'];
+                                ?>
+                            </h5>
+                        </i>
+                        <div class="menu">
+                            <div class="header">Configurações</div>
+                            <a class="item" href="perfil.php">Perfil</a>
+                            <div class="item">Carrinho</div>
+                            <div class="item">Editar</div>
+                            <a class="item" href="logout.php">Sair</a>
+                        </div>
+                    </div>
             <?php
                 }
             ?>
-            
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div>  

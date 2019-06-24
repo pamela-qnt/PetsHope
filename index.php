@@ -29,9 +29,8 @@
               <i class="sidebar icon"></i>
             </a>
             <a href="index.php" class="active item">Home</a>
-            <a class="item" href="index (cópia).php">Produtos</a>
+            <a class="item">Produtos</a>
             <a class="item">Adoção</a>
-            <a class="item">Perfil</a>
             <div class="right item">
             <?php 
                 if(!isset($_SESSION['id_usuario'])){ 
@@ -52,29 +51,10 @@
                             </h5>
                         </i>
                         <div class="menu">
-                            <div class="header">Display Density</div>
-                            <div class="item">Comfortable</div>
-                            <div class="item">Cozy</div>
-                            <div class="item">Compact</div>
-                            <div class="ui divider"></div>
-                            <div class="item">Settings</div>
-                            <div class="item">
-                                <i class="dropdown icon"></i>
-                                <span class="text">Upload Settings</span>
-                                <div class="menu">
-                                    <div class="item">
-                                        <i class="check icon"></i>
-                                        Convert Uploaded Files to PDF
-                                    </div>
-                                    <div class="item">
-                                        <i class="check icon"></i>
-                                        Digitize Text from Uploaded Files
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">Manage Apps</div>
-                            <div class="item">Keyboard Shortcuts</div>
-                            <div class="item">Help</div>
+                            <div class="header">Configurações</div>
+                            <a class="item" href="perfil.php">Perfil</a>
+                            <div class="item">Carrinho</div>
+                            <div class="item">Editar</div>
                             <a class="item" href="logout.php">Sair</a>
                         </div>
                     </div>
