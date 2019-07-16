@@ -29,7 +29,7 @@
               <i class="sidebar icon"></i>
             </a>
             <a href="index.php" class="active item">Home</a>
-            <a class="item">Produtos</a>
+            <a href="index - Copia.php" class="item">Produtos</a>
             <a class="item">Adoção</a>
             <div class="right item">
             <?php 
