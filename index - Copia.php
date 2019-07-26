@@ -41,8 +41,8 @@
         <a class="item">Produtos</a>
         <a class="item">Adotar</a>
         <div class="right menu">
-          <a class="item">Cadastre-se</a>
-          <a class="item">Entrar</a>
+          <a class="item" href="cadastrar.php">Cadastre-se</a>
+          <a class="item" href="entrar.php">Entrar</a>
         </div>
       </div>
     </div>
@@ -59,40 +59,41 @@
 
   <!-- "Produtos" --> 
 
-    <div class="ui vertical stripe segment" style="margin-top: 2%">
+  <div class="ui vertical stripe segment" style="margin-top: 2%">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
           <h2 class="ui header" style="font-size: 32px">Texto explicando o produto</h2>
           <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit purus mattis, primis luctus curabitur metus mauris proin tempus massa himenaeos, montes quisque sociosqu consequat auctor sapien nam sem. Tempor sagittis suscipit eu erat aliquam sapien posuere finibus, dictum blandit enim dignissim class vivamus elit maximus cubilia, volutpat consequat euismod per pharetra lacus hac.</h4>
         </div>
-        <div class="six wide right floated column" >
-          <a href="https://google.com" class="ui medium image">
-          <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
-          </a>
-        </div>
+          <div class="six wide right floated column" >
+            <a href="https://google.com" class="ui medium image">
+            <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
+            </a>
+          </div>
       </div>
-
     </div>
   </div>
   
 
-
+<!-- Grid com três fotos -->
 
     <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
-      <div class="card">
+      <div class="card" style="background-image: url(images/gatos_cama.jpg); background-size: 100%; background-repeat: no-repeat;">
         <div class="image">
-          <a href="https://google.com"><img src="images/gato_cama.jpg" style="width: 100%"></a>
+           <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Caminhas</h2>
         </div>
       </div>
-      <div class="card" >
-       <div class="image">
-          <a href="https://google.com"><img src="images/comedouro.png" style="width: 100%; "></a>
+
+      <div class="card"  style="background-image: url(images/comedouro.png); background-size: 100%; background-repeat: no-repeat;">
+        <div class="image">
+          <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center;">Comedouros</h2>
         </div>
       </div>
-      <div class="card" >
+
+      <div class="card" style="background-image: url(images/gato_coleira.jpg); background-size: 100%; background-repeat: no-repeat;">
         <div class="image">
-          <a href="https://google.com"><img src="images/gato_coleira.jpg" style="width: 100%" ></a>
+          <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Acessórios</h2>
         </div>
       </div>
     </div>
