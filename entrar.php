@@ -59,7 +59,7 @@
     </style>
 
         <form action="entrar.php" method="post" class="ui form" 
-                style="margin-left: 28%; margin-right: 28%; margin-top: 10%; background-color: #C0C0C0; padding: 4%; border-radius: 20px;">
+                style="margin-left: 28%; margin-right: 28%; margin-top: -5%; background-color: #C0C0C0; padding: 4%; border-radius: 20px;">
             <div class="field">
                 <label>Email</label>
                 <input type="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br/>
