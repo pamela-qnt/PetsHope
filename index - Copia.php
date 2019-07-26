@@ -30,7 +30,7 @@
 
 
 
-<!-- Page Contents -->
+<!-- Menu -->
 
   <div class="ui inverted vertical masthead center aligned segment" style="background-image: url(images/branco.jpg); background-repeat: no-repeat; background-size: 100%">
 
@@ -57,16 +57,45 @@
 
   </div>
 
-  <div class="ui relaxed grid">
-  <div class="three column row">
-    <div class="column" style="background-image: url(images/coleiras.jpg); height: 500px;"></div>
-    <div class="column" style="background-image: url(images/novidades.jpg); height: 100px ">asdsad</div>
-    <div class="column" style="background-image: url(images/acessorios.png); height: 100px">asdasda</div>
+  <!-- "Produtos" --> 
+
+    <div class="ui vertical stripe segment" style="margin-top: 2%">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h2 class="ui header" style="font-size: 32px">Texto explicando o produto</h2>
+          <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit purus mattis, primis luctus curabitur metus mauris proin tempus massa himenaeos, montes quisque sociosqu consequat auctor sapien nam sem. Tempor sagittis suscipit eu erat aliquam sapien posuere finibus, dictum blandit enim dignissim class vivamus elit maximus cubilia, volutpat consequat euismod per pharetra lacus hac.</h4>
+        </div>
+        <div class="six wide right floated column" >
+          <a href="https://google.com" class="ui medium image">
+          <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
+          </a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
   
 
 
+
+    <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
+      <div class="card">
+        <div class="image">
+          <a href="https://google.com"><img src="images/gato_cama.jpg" style="width: 100%"></a>
+        </div>
+      </div>
+      <div class="card" >
+       <div class="image">
+          <a href="https://google.com"><img src="images/comedouro.png" style="width: 100%; "></a>
+        </div>
+      </div>
+      <div class="card" >
+        <div class="image">
+          <a href="https://google.com"><img src="images/gato_coleira.jpg" style="width: 100%" ></a>
+        </div>
+      </div>
+    </div>
 
 
 
