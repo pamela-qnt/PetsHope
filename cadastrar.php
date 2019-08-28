@@ -56,7 +56,7 @@
         }
     </style>
 
-       <form action="cadastrar.php" method="post" post="register" class="ui form" style="margin-left: 28%; margin-right: 28%; margin-top: 5%; background-color: #C0C0C0; padding: 5%; border-radius: 20px; opacity: 0.9;">
+       <form action="cadastrar.php" method="post" post="register" class="ui form" style="margin-left: 28%; margin-right: 28%; margin-top: -6%; background-color: #C0C0C0; padding: 5%; border-radius: 20px; opacity: 0.9;">
             <div class="field">
                 <label>Nome Completo</label>
                 <input type="text" name="nome_usuario" placeholder="Nome" autocomplete="off" class="box"/><br/>

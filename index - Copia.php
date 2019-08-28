@@ -38,11 +38,37 @@
       <div class="ui large gray menu">
       
         <a class="item">Home</a>
-        <a class="item">Produtos</a>
+        <a class="item" href="produtos.php">Produtos</a>
         <a class="item">Adotar</a>
         <div class="right menu">
-          <a class="item" href="cadastrar.php">Cadastre-se</a>
-          <a class="item" href="entrar.php">Entrar</a>
+         <?php 
+                if(!isset($_SESSION['id_usuario'])){ 
+          ?>
+            <a class="item" href="cadastrar.php">Cadastre-se</a>
+            <a class="item" href="entrar.php">Entrar</a>
+
+         <?php
+                }else{
+            ?>
+                    <div class="ui icon top left simple dropdown" style="color:black">
+                        <i class="user icon" style="width: 110%; margin-top: 19%; margin-left: -35%">
+                            <h5 style="float: right;">
+                                <?php
+                                    echo $_SESSION['nome_usuario'];
+                                ?>
+                            </h5>
+                        </i>
+                        <div class="menu">
+                            <div class="header">Config</div>
+                            <a class="item" href="perfil.php">Perfil</a>
+                            <div class="item">Carrinho</div>
+                            <div class="item">Editar</div>
+                            <a class="item" href="logout.php">Sair</a>
+                        </div>
+                    </div>
+            <?php
+                }
+            ?>
         </div>
       </div>
     </div>
@@ -79,22 +105,22 @@
 <!-- Grid com três fotos -->
 
     <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
-      <div class="card" style="background-image: url(images/gatos_cama.jpg); background-size: 100%; background-repeat: no-repeat;">
-        <div class="image">
-           <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Caminhas</h2>
-        </div>
+     <div class="card" style="background-image: url(images/gatos_cama.jpg); background-size: 100%; background-repeat: no-repeat;">
+        <a href="https://www.google.com/"><div class="image">
+           <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Camas</h2>
+        </div></a>
       </div>
 
       <div class="card"  style="background-image: url(images/comedouro.png); background-size: 100%; background-repeat: no-repeat;">
-        <div class="image">
+        <a href="https://www.google.com/"><div class="image">
           <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center;">Comedouros</h2>
-        </div>
+        </div></a>
       </div>
 
       <div class="card" style="background-image: url(images/gato_coleira.jpg); background-size: 100%; background-repeat: no-repeat;">
-        <div class="image">
+         <a href="https://www.google.com/"><div class="image">
           <h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Acessórios</h2>
-        </div>
+        </div></a>
       </div>
     </div>
 

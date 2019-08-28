@@ -4,7 +4,8 @@
 CREATE TABLE animal (
 id_animal int(11) PRIMARY KEY AUTO_INCREMENT,
 nome_animal varchar(50),
-sexo char(1)
+sexo char(1),
+imagem_animal longblob
 );
 
 CREATE TABLE especie_animal (
@@ -20,6 +21,7 @@ email varchar(100),
 tel_contato int(11),
 senha varchar(50),
 id_tipo_usuario int(11),
+imagem_usuario longblob,
 FOREIGN KEY(id_tipo_usuario) REFERENCES tipo_usuario (id_tipo_usuario)
 );
 
@@ -35,6 +37,7 @@ qtd_estoque int(11),
 desc_produto varchar(300),
 valor decimal(10,2),
 id_tipo_prod_fk int(11), 
+imagem_produto longblob NOT NULL,
 FOREIGN KEY(id_tipo_prod_fk) REFERENCES tipo_produto (id_tipo_prod)
 );
 
@@ -54,7 +57,8 @@ FOREIGN KEY(id_usuario) REFERENCES usuario (id_usuario)
 CREATE TABLE carrinho (
 id_pedido int(11) PRIMARY KEY AUTO_INCREMENT, 
 id_usuario int(11), 
-data_pedido date, 
+data_pedido date,
+desc_prod_carrinho varchar(9999),  
 total_compra decimal(10,2),
 FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
 );
