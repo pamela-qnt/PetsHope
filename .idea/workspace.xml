@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9e6ffa4-036a-4051-9ca6-d4fd09e7fbb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Modelos/1 - Conceitual/CONCEITUAL_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelos/2 - Logico/LOGICO_PETSHOPE.brM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelos/3 - Fisico/FISICO_PETSHOPE.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modelos/CONCEITUAL_PETSHOPE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/cabecalho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastrar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/entrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index - Copia.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil - Copia.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/perfil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petsHope.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/produtos.php" beforeDir="false" afterPath="$PROJECT_DIR$/produtos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rodape.php" beforeDir="false" afterPath="$PROJECT_DIR$/rodape.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-1" />
+    <option name="width" value="1920" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectId" id="1Qgn9uXwTcsrTESGbZZBULYbcJS" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9e6ffa4-036a-4051-9ca6-d4fd09e7fbb5" name="Default Changelist" comment="" />
+      <created>1568200958926</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568200958926</updated>
+      <workItem from="1568200961565" duration="2911000" />
+      <workItem from="1569602492271" duration="5173000" />
+      <workItem from="1569850849825" duration="1318000" />
+      <workItem from="1570017751098" duration="900000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

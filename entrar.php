@@ -59,17 +59,15 @@
     </style>
 
         <form action="entrar.php" method="post" class="ui form" 
-                style="margin-left: 28%; margin-right: 28%; margin-top: -5%; background-color: #C0C0C0; padding: 4%; border-radius: 20px;">
+                style="margin-left: 35%; margin-right: 35%; margin-top: 7%; padding: 4%;">
+            <h1 style="color: white;">PetsHope</h1>
             <div class="field">
-                <label>Email</label>
-                <input type="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box"/><br/>
+                <input type="text" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'] ?>" autocomplete="off" class="box" placeholder="Email"/><br/>
             </div>
             <div class="field">
-                <label>Senha</label>
-                <input type="password" name="senha" value="<?php if(isset($_POST['senha'])) echo $_POST['senha'] ?>" autocomplete="off" class="box" /><br/>
+
+                <input type="password" name="senha" value="<?php if(isset($_POST['senha'])) echo $_POST['senha'] ?>" autocomplete="off" class="box" placeholder="Senha"/><br/>
             </div>
 
-            <input class="ui button submit" type="submit" style="background-color: black; color: white;" name="login" value="Login"></input>
+            <input class="ui button submit" type="submit" style="width: 100%; background-color: #C0C0C0; color: white;" name="login" value="Entrar"></input>
         </form> 
-        
-

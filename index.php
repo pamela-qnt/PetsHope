@@ -2,7 +2,7 @@
     require 'config.php';
 ?>
 <!DOCTYPE html>
-  <html>
+<html>
     <head>
 
         <!-- LINK's NECESSÁRIOS --> 
@@ -12,6 +12,9 @@
 
         <link rel="sortcut icon" href="imagens/favicon.png" type="image/png"/>
 
+
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+
         <title> PetsHope </title>
     </head>
 
@@ -19,128 +22,103 @@
     <script src="../dist/components/visibility.js"></script>
     <script src="../dist/components/sidebar.js"></script>
     <script src="../dist/components/transition.js"></script>
-  
-    <div class="pusher" >
-      <div class="ui inverted vertical masthead center aligned segment cabecalho" style="padding-bottom: 38%; background-image: url(images/happy.jpg); background-repeat: no-repeat; ">
 
-        <div class="ui container" style="width: 80%; ">
-          <div class="ui large secondary inverted pointing menu" style="margin-top: -2%;">
-            <a class="toc item">
-              <i class="sidebar icon"></i>
-            </a>
-            <a href="index.php" class="active item">Home</a>
-            <a href="index - Copia.php" class="item">Produtos</a>
-            <a class="item">Adoção</a>
-            <div class="right item">
-            <?php 
-                if(!isset($_SESSION['id_usuario'])){ 
-            ?>
+<!-- Menu -->
 
-                <div><a class="ui inverted button" href="entrar.php">Log in</a></div>
-                <div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
+    <div class="ui inverted vertical masthead center aligned segment" style="background-image: url(images/branco.jpg); background-repeat: no-repeat; background-size: 100%">
 
-            <?php
-                }else{
-            ?>
-                    <div class="ui icon top left simple dropdown">
-                        <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
-                            <h5 style="float: right;">
-                                <?php
-                                    echo $_SESSION['nome_usuario'];
-                                ?>
-                            </h5>
-                        </i>
-                        <div class="menu">
-                            <div class="header">Configurações</div>
-                            <a class="item" href="perfil.php">Perfil</a>
-                            <div class="item">Carrinho</div>
-                            <div class="item">Editar</div>
-                            <a class="item" href="logout.php">Sair</a>
-                        </div>
-                    </div>
-            <?php
-                }
-            ?>
+        <div class="ui container">
+            <div class="ui large gray menu">
+
+                <a href="index.php" class="item">Home</a>
+                <a href="perfil.php" class="item">Perfil</a>
+                <a href="cadastrar_produto.php" class="item">Produtos</a>
+                <a class="item">Adotar</a>
+                <div class="right menu">
+                    <?php
+                        if(!isset($_SESSION['id_usuario'])){
+                    ?>
+
+                    <div><a class="item" href="cadastrar_usuario.php">Cadastre-se</a></div>
+                    <div><a class="item" href="entrar.php">Entrar</a></div>
+
+                    <?php
+                        }else{
+                    ?>
+                            <div class="ui icon top left simple dropdown">
+                                <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
+                                    <h5 style="float: right; margin-left: 34%; ">
+                                        <div style="margin-left: -100%; ">
+                                            <?php
+                                                echo $_SESSION['nome_usuario'];
+                                            ?>
+                                        </div>
+                                    </h5>
+                                </i>
+                                <div class="menu">
+                                    <div class="header">Configurações</div>
+                                    <a class="item" href="perfil.php">Perfil</a>
+                                    <div class="item">Carrinho</div>
+                                    <div class="item">Editar</div>
+                                    <a class="item" href="logout.php">Sair</a>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    ?>
+                </div>
             </div>
-          </div>
         </div>
-      </div>  
-  
-  
 
-<div class="ui four cards" style="margin-top: 5%; margin-left: 5%; margin-bottom: 5%">
-  <div class="ui card">
-    <div class="image">
-      <img src="images/utilitarios.webp" >
+        <div class="ui text container" style="margin-top: 15%; margin-bottom: 10%; margin-left: 10%">
+            <h1 class="ui inverted header" style=" font-size: 110px; color: black">
+                PetsHope
+            </h1>
+            <h2 style="color: black">Tudo para o seu Pet</h2>
+        </div>
     </div>
-    <div class="content">
-      <div class="header">Comedouros</div>
-      <div class="meta">
-        <a class="group">Ver mais</a>
-      </div>
-      <div class="description">Comedouros versáteis, úteis e lindos para seu animal, confira mais produtos como este em nosso site!</div>
+
+
+  <!-- "Produtos" --> 
+
+    <div class="ui vertical stripe segment" style="margin-top: 2%">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h2 class="ui header" style="font-size: 32px">Texto explicando o produto</h2>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit purus mattis, primis luctus curabitur metus mauris proin tempus massa himenaeos, montes quisque sociosqu consequat auctor sapien nam sem. Tempor sagittis suscipit eu erat aliquam sapien posuere finibus, dictum blandit enim dignissim class vivamus elit maximus cubilia, volutpat consequat euismod per pharetra lacus hac.</h4>
+                </div>
+                <div class="six wide right floated column" >
+                    <a href="https://google.com" class="ui medium image">
+                        <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="extra content">
 
+<!-- Grid com três fotos -->
 
-      <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
-  <div class="visible content">12.99</div>
-  <div class="hidden content">
-   Adicionar ao Carrinho
-  </div>
-</div>
+    <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
+        <div class="card" style="background-image: url(images/gatos_cama.jpg); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+               <a href="produtos.php?tipo=Camas"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Caminhas</h2></a>
+            </div>
+        </div>
+
+        <div class="card"  style="background-image: url(images/comedouro.png); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+                <a href="produtos.php?tipo=Comedouro"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center;">Comedouros</h2></a>
+            </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/gato_coleira.jpg); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+                <a href="produtos.php?tipo=Coleira"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Acessórios</h2></a>
+            </div>
+        </div>
     </div>
-  </div>
 
-   <div class="ui card" style="margin-left: 7%">
-    <div class="image">
-      <img src="images/acessorios.png">
-    </div>
-    <div class="content">
-      <div class="header">Acessórios</div>
-      <div class="meta">
-        <a class="group">Ver mais</a>
-      </div>
-      <div class="description">Deixe seu animal com seu estilo!</div>
-    </div>
-    <div class="extra content">
-      <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
-  <div class="visible content">12.99</div>
-  <div class="hidden content">
-   Adicionar ao Carrinho
-  </div>
-</div>
-    </div>
-  </div>
-
-  <div class="ui card" style="margin-left: 7%">
-    <div class="image">
-      <img src="images/brinquedos.jpg">
-    </div>
-    <div class="content">
-      <div class="header">Brinquedos</div>
-      <div class="meta">
-        <a class="group">Meta</a>
-      </div>
-      <div class="description">One or two sentence description that may go to several lines</div>
-    </div>
-    <div class="extra content">
-           <div class="ui animated fade button" tabindex="0" style="margin-left: 50%; width: 50%">
-  <div class="visible content">12.99</div>
-  <div class="hidden content">
-   Adicionar ao Carrinho
-  </div>
-</div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-<?php
-    include 'rodape.php';
-?>
+    <?php
+    include("rodape.php");
+    ?>

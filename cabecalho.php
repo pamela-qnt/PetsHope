@@ -1,4 +1,4 @@
-<?php
+    <?php
     require 'config.php';
 ?>
 <!DOCTYPE html>
@@ -14,63 +14,26 @@
 
         <title> PetsHope </title>
     </head>
-
-</style>
-
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="../dist/components/visibility.js"></script>
-  <script src="../dist/components/sidebar.js"></script>
-  <script src="../dist/components/transition.js"></script>
-  <script>
-  $(document)
-    .ready(function() {
-
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-        $('.ui.sidebar')
-                .sidebar('attach events', '.toc.item');
-            })
-        ; 
-  </script>
-
-
-
-<div class="pusher" >
-  <div class="ui inverted vertical masthead center aligned segment cabecalho">
-
-    <div class="ui container" style="width: 80%; ">
-      <div class="ui large secondary inverted pointing menu" style="margin-top: -2%;">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        <a href="index.php" class="active item">Home</a>
-        <a class="item">Produtos</a>
-        <a class="item">Adoção</a>
-        <div class="right item">
-             <?php 
+  <div>
+    <div>
+      <div class="ui container" style="margin-top: 1%;">
+      <div class="ui large gray menu">
+      
+        <a class="item" href="index.php">Home</a>
+        <a class="item" href="produtos.php">Produtos</a>
+        <a class="item">Adotar</a>
+        <div class="right menu">
+         <?php 
                 if(!isset($_SESSION['id_usuario'])){ 
-            ?>
+          ?>
+            <a class="item" href="cadastrar_usuario.php">Cadastre-se</a>
+            <a class="item" href="entrar.php">Entrar</a>
 
-                <div><a class="ui inverted button" href="entrar.php">Log in</a></div>
-                <div><a class="ui inverted button" href="cadastrar.php">Sign Up</a></div>
-
-            <?php
+         <?php
                 }else{
             ?>
-                    <div class="ui icon top left simple dropdown">
-                        <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
+                    <div class="ui icon top left simple dropdown" style="color:black">
+                        <i class="user icon" style="width: 110%; margin-top: 19%; margin-left: -35%">
                             <h5 style="float: right;">
                                 <?php
                                     echo $_SESSION['nome_usuario'];
@@ -78,17 +41,16 @@
                             </h5>
                         </i>
                         <div class="menu">
-                            <div class="header">Configurações</div>
                             <a class="item" href="perfil.php">Perfil</a>
-                            <div class="item">Carrinho</div>
-                            <div class="item">Editar</div>
+                            <a class="item">Carrinho</a>
+                            <a class="item">Editar</a>
                             <a class="item" href="logout.php">Sair</a>
                         </div>
                     </div>
             <?php
                 }
             ?>
-            </div>
-          </div>
         </div>
-      </div>  
+      </div>
+    </div>
+  </div>  

@@ -1,31 +1,40 @@
-		  <div class="ui inverted vertical footer segment">
-		    <div class="ui container">
-		      <div class="ui stackable inverted divided equal height stackable grid">
-		        <div class="three wide column">
-		          <h4 class="ui inverted header">About</h4>
-		          <div class="ui inverted link list">
-		            <a href="#" class="item">Sitemap</a>
-		            <a href="#" class="item">Contact Us</a>
-		            <a href="#" class="item">Religious Ceremonies</a>
-		            <a href="#" class="item">Gazebo Plans</a>
-		          </div>
-		        </div>
-		        <div class="three wide column">
-		          <h4 class="ui inverted header">Services</h4>
-		          <div class="ui inverted link list">
-		            <a href="#" class="item">Banana Pre-Order</a>
-		            <a href="#" class="item">DNA FAQ</a>
-		            <a href="#" class="item">How To Access</a>
-		            <a href="#" class="item">Favorite X-Men</a>
-		          </div>
-		        </div>
-		        <div class="seven wide column">
-		          <h4 class="ui inverted header">Footer Header</h4>
-		          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-	</body>
-</html>
+  <div class="ui gray inverted vertical footer segment" style="margin-top: 5%; background-color: #F8F8FF; "> 
+    <div class="ui container" style="width: 88%">
+      <div class="ui stackable divided equal height stackable grid" >
+        <div class="three wide column" >
+          <h4 class="ui header" >Sobre</h4>
+          <div class="ui link list" style="font-color: black; margin-right: 5%">
+            <p class="item">O site PetsHope, tem o objetivo de 
+            facilitar a vida do usuário em relação as compras
+        	para seus pets.</p>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui header">Criadoras</h4>
+          <div class="ui link list" style="font-color: black; margin-right: 8%">
+            <p class="item">PetsHope é um trabalho de conclusão de curso realizado pelas alunas: 
+            Anna Francine Molinari de Morais, Pamela Quint e Raíssa Damasceno.</p>
+          </div>
+        </div>	
+        <div class="seven wide column">
+          <h4 class="ui header">Instituição</h4>
+          <div class="ui link list">
+            <p class="item">Estudantes do Instituto Federal Catarinense, alunas do terceiro ano do ensino médio técnico integrado ao curso de informática. O projeto foi realizado integrando as disciplinas de: Banco de Dados, Engenharia de Software, Programação e Desenvolvimento Web.</p>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui header">Sociais</h4>
+          <div class="ui link list" style="font-color: black; margin-right: 8%">
+        	<p class="item">@bananagelada</br>@pamela_quint</br>@raissadamasceno_</p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+         

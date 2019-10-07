@@ -1,53 +1,60 @@
-<!DOCTYPE html>
-  <html>
-    <head>
+    <?php
 
-        <!-- LINK's NECESSÁRIOS --> 
+        include 'cabecalho.php';
+        require 'config.php';
+        echo "</br></br></br>";
 
-        <link rel="stylesheet" href="semantic.min.css" type="text/css">
-        <link rel="stylesheet" src="cabecalho.css" type="text/css"></link>
+    ?>
 
-        <link rel="sortcut icon" href="imagens/favicon.png" type="image/png"/>
+    <?php
 
+        $tipo = $_GET['tipo'];
 
-        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+        try {
+            $query = 'SELECT id_produto, nome_produto, qtd_estoque, desc_produto, valor, img_produto, desc_tipo_prod FROM produto, tipo_produto WHERE id_tipo_prod_fk = id_tipo_prod and desc_tipo_prod ="' .$tipo. '"';
+            $stmt = $connect->prepare($query);
+            $result = $stmt->execute(array(
+                    $id_produto = ':id_produto',
+                    $nome_produto = ':nome_produto',
+                    $qtd_estoque = ':qtd_estoque',
+                    $desc_produto = ':desc_produto',
+                    $valor = ':valor',
+                    $img_produto = ':img_produto',
+                    $desc_tipo_prod = ':desc_tipo_prod'
+                ));
+            while ($row = $stmt->fetch()) {
+    ?>
 
-        <title> PetsHope </title>
-    </head>
+                <div style="border: solid; border-width: 1px; border-radius: 2px; margin-bottom: 2%; width: 25%; float: left; margin-left: 6%; padding: 0.5%">
 
-    <script src="assets/library/jquery.min.js"></script>
-    <script src="../dist/components/visibility.js"></script>
-    <script src="../dist/components/sidebar.js"></script>
-    <script src="../dist/components/transition.js"></script>
+                    <img src="<?php print_r($row['img_produto']); ?>" style="width: 100%; height: 50%; border-radius: 2px;">
 
+                    <?php
+                    print_r("<b>" . $row['nome_produto'] . "</b>");
+                    echo "<br>";
+                    ?>
 
-<div class="ui four cards">
-  <div class="ui card">
-    <div class="image">
-      <div class="ui blurring inverted dimmer">
-        <div class="content">
-          <div class="center">
-            <div class="ui teal button">Add Friend</div>
-          </div>
-        </div>
-      </div>
-      <img src="images/brinquedos.jpg">
-    </div>
-    <div class="content">
-      <div class="header">Title</div>
-      <div class="meta">
-        <a class="group">Meta</a>
-      </div>
-      <div class="description">One or two sentence description that may go to several lines</div>
-    </div>
-    <div class="extra content">
-      <a class="right floated created">R$12.99</a>
-      <div class="ui vertical animated button" tabindex="0">
-  <div class="hidden content">Shop</div>
-  <div class="visible content">
-    <i class="shop icon"></i>
-  </div>
-</div>
-    </div>
-  </div>
-  
+                    <button class="ui primary button" style="margin-top: 5%; margin-bottom: -5%;">
+
+                    <?php
+                    print_r("R$" . $row['valor']);
+                    ?>
+
+                    </button>
+
+                    <?php
+                    echo "<br>";
+                    echo "<br><br>";
+                    ?>
+
+                </div>
+
+<?php
+            }
+            exit;
+    }
+    catch(PDOException $e) {
+        echo $e->getMessage();
+    }
+
+?>
