@@ -1,7 +1,6 @@
 <?php
     include("cabecalho.php");
-    require 'config.php';
-    
+      
 
         if(isset($_POST['login'])) {
         $errMsg = '';
@@ -17,7 +16,7 @@
 
         if($errMsg == '') {
             try {
-                $stmt = $connect->prepare('SELECT id_usuario, nome_usuario, email, tel_contato, senha FROM usuario WHERE email = :email');
+                $stmt = $connect->prepare('SELECT id_usuario, nome_usuario, email, tel_contato, senha, estado, cidade, bairro, desc_tipo_logradouro, id_tipo_usuario_fk, imagem_usuario FROM usuario WHERE email = :email');
                 $stmt->execute(array(
                     ':email' => $email
                     ));
@@ -32,6 +31,13 @@
                         $_SESSION['nome_usuario'] = $data['nome_usuario'];
                         $_SESSION['email'] = $data['email'];
                         $_SESSION['senha'] = $data['senha'];
+                        $_SESSION['tel_contato'] = $data['tel_contato'];
+                        $_SESSION['estado'] = $data['estado'];
+                        $_SESSION['cidade'] = $data['cidade'];
+                        $_SESSION['bairro'] = $data['bairro'];
+                        $_SESSION['desc_tipo_logradouro'] = $data['desc_tipo_logradouro'];
+                        $_SESSION['id_tipo_usuario_fk'] = $data['id_tipo_usuario_fk'];
+                        $_SESSION['imagem_usuario'] = $data['imagem_usuario'];
                         header('Location: index.php');
                     }
                     else

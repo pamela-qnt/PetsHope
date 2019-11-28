@@ -1,21 +1,19 @@
 <?php
 include("cabecalho.php");
-?>
-<?php
-require 'config.php';
 
 if(isset($_POST['register'])) {
     $errMsg = '';
 
-    // Get data from FROM
+    // Get data from FORM
     $nome_produto = $_POST['nome_produto'];
     $qtd_estoque = $_POST['qtd_estoque'];
     $desc_produto = $_POST['desc_produto'];
     $valor = $_POST['valor'];
     $img_produto = $_FILES["img_produto"];
     $id_tipo_prod = $_POST["id_tipo_prod_fk"];
-    $target_dir = "imagens/perfil/";
-    $target_file = $target_dir . basename($_FILES["img_produto"]["name"]);
+    $target_dir = "images/";
+    $nome_arquivo = mt_rand() . basename($_FILES['imagem_usuario']['name']);
+    $target_file = $target_dir . $nome_arquivo;
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -81,7 +79,7 @@ if(isset($_POST['register'])) {
                         ':qtd_estoque' => $qtd_estoque,
                         ':desc_produto' => $desc_produto,
                         ':valor' => $valor,
-                        ':img_produto' => $_FILES["img_produto"]["name"],
+                        ':img_produto' => $target_file,
                         ':id_tipo_prod_fk' => $id_tipo_prod
                     ));
                     header('Location: cadastrar_produto.php?action=joined');
@@ -104,11 +102,9 @@ if(isset($_POST['register'])) {
 }
 
 if(isset($_GET['action']) && $_GET['action'] == 'joined') {
-    print('<meta http-equiv="refresh" content="0;url=entrar.php">');
+    print('<meta http-equiv="refresh" content="0;url=cadastrar_produto.php">');
 }
-?>
 
-<?php
 if(isset($errMsg)){
     echo '<div style="color:#FF0000;text-align:center;font-size:17px;">'.$errMsg.'</div>';
 }
@@ -123,7 +119,7 @@ if(isset($errMsg)){
     }
 </style>
 
-<form action="cadastrar_produto.php" method="post" post="register" class="ui form"
+<form action="cadastrar_produto.php" method="post" post="register" enctype="multipart/form-data" class="ui form"
       style="margin-left: 35%; margin-right: 35%; margin-top: 3%; padding: 4%;">
     <h1 style="color: white;">PetsHope</h1>
     <div class="field">

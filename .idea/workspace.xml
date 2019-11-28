@@ -11,6 +11,8 @@
       <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/entrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/entrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gato_coleira.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/gato_coleira.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/novidades.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index - Copia.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil - Copia.php" beforeDir="false" />
@@ -39,11 +41,6 @@
         <option value="$PROJECT_DIR$/.idea" />
       </set>
     </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
   </component>
   <component name="ProjectId" id="1Qgn9uXwTcsrTESGbZZBULYbcJS" />
   <component name="PropertiesComponent">
@@ -78,6 +75,12 @@
       <workItem from="1569602492271" duration="5173000" />
       <workItem from="1569850849825" duration="1318000" />
       <workItem from="1570017751098" duration="900000" />
+      <workItem from="1570619831446" duration="4170000" />
+      <workItem from="1572624667520" duration="7183000" />
+      <workItem from="1572887121175" duration="4059000" />
+      <workItem from="1572969931055" duration="626000" />
+      <workItem from="1573038809540" duration="2910000" />
+      <workItem from="1573229699380" duration="6558000" />
     </task>
     <servers />
   </component>

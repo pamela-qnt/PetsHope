@@ -23,18 +23,14 @@
           </div>
         </div>
         <div class="three wide column">
-          <h4 class="ui header">Sociais</h4>
+          <h4 class="ui header">Nos siga nas redes sociais!</h4>
           <div class="ui link list" style="font-color: black; margin-right: 8%">
-        	<p class="item">@bananagelada</br>@pamela_quint</br>@raissadamasceno_</p>
-
+        	<a class="item" href="https://www.instagram.com/banannagelada">@bananagelada</a>
+            <a class="item" href="https://www.instagram.com/pamela_quint">@pamela_quint</a>
+            <a class="item" href="https://www.instagram.com/raissadamasceno_">@raissadamasceno_</a>
           </div>
         </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
-  
-         

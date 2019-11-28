@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="semantic.min.css" type="text/css">
         <link rel="stylesheet" src="cabecalho.css" type="text/css"></link>
 
-        <link rel="sortcut icon" href="imagens/favicon.png" type="image/png"/>
+        <link rel="sortcut icon" href="images/favicon.png" type="image/png"/>
 
 
         <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
@@ -31,9 +31,14 @@
             <div class="ui large gray menu">
 
                 <a href="index.php" class="item">Home</a>
-                <a href="perfil.php" class="item">Perfil</a>
-                <a href="cadastrar_produto.php" class="item">Produtos</a>
-                <a class="item">Adotar</a>
+            <?php
+                if (isset($_SESSION['id_tipo_usuario_fk']) && $_SESSION['id_tipo_usuario_fk'] == '2') {
+            ?>
+                    <a class="item" href="gerenciar_produtos.php">Gerenciar Produtos</a>
+                    <a class="item" href="cadastrar_produto.php">Cadastrar Produto</a>
+            <?php
+                }
+            ?>
                 <div class="right menu">
                     <?php
                         if(!isset($_SESSION['id_usuario'])){
@@ -45,24 +50,10 @@
                     <?php
                         }else{
                     ?>
-                            <div class="ui icon top left simple dropdown">
-                                <i class="user outline icon" style="width: 150%; margin-bottom: 2%;">
-                                    <h5 style="float: right; margin-left: 34%; ">
-                                        <div style="margin-left: -100%; ">
-                                            <?php
-                                                echo $_SESSION['nome_usuario'];
-                                            ?>
-                                        </div>
-                                    </h5>
-                                </i>
-                                <div class="menu">
-                                    <div class="header">Configurações</div>
-                                    <a class="item" href="perfil.php">Perfil</a>
-                                    <div class="item">Carrinho</div>
-                                    <div class="item">Editar</div>
-                                    <a class="item" href="logout.php">Sair</a>
-                                </div>
-                            </div>
+                            <a class="item">Bem vindo(a) <?php echo $_SESSION['nome_usuario']?></a>
+                            <a href="carrinho.php" class="item">Carrinho</a>
+                            <a href="perfil.php" class="item">Perfil</a>  
+                            <a href="logout.php" class="item">Sair</a>
                     <?php
                         }
                     ?>
@@ -85,12 +76,12 @@
         <div class="ui middle aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
-                    <h2 class="ui header" style="font-size: 32px">Texto explicando o produto</h2>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit purus mattis, primis luctus curabitur metus mauris proin tempus massa himenaeos, montes quisque sociosqu consequat auctor sapien nam sem. Tempor sagittis suscipit eu erat aliquam sapien posuere finibus, dictum blandit enim dignissim class vivamus elit maximus cubilia, volutpat consequat euismod per pharetra lacus hac.</h4>
+                    <h2 class="ui header" style="font-size: 32px">Nossa motivação é a felicidade!</h2>
+                    <h4>Nós da PetsHope sabemos como um animalzinho de estimação pode se tornar um melhor amigo e até um membro da família, afinal eles compartilham os momentos bons e ruins ao nosso lado. Pensando nisso, criamos uma marca que se preocupa com o bem estar dos pets e dos donos, mas sem deixar de lado a estética, sempre com qualidade e bom gosto.</h4>
                 </div>
                 <div class="six wide right floated column" >
-                    <a href="https://google.com" class="ui medium image">
-                        <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
+                    <a href="produtos.php?tipo=Para Morder" class="ui medium image">
+                        <img src="images/mordedor_xaman.webp" class="ui large bordered rounded image">
                     </a>
                 </div>
             </div>
@@ -102,20 +93,45 @@
     <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
         <div class="card" style="background-image: url(images/gatos_cama.jpg); background-size: 100%; background-repeat: no-repeat;">
             <div class="image">
-               <a href="produtos.php?tipo=Camas"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Caminhas</h2></a>
+               <a href="produtos.php?tipo=Camas"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Caminhas</h2></a>
             </div>
         </div>
 
-        <div class="card"  style="background-image: url(images/comedouro.png); background-size: 100%; background-repeat: no-repeat;">
+        <div class="card" style="background-image: url(images/comedouro.jpg); background-size: 100%; background-repeat: no-repeat;">
             <div class="image">
-                <a href="produtos.php?tipo=Comedouro"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center;">Comedouros</h2></a>
+                <a href="produtos.php?tipo=Comedouro"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Comedouros</h2></a>
             </div>
         </div>
 
         <div class="card" style="background-image: url(images/gato_coleira.jpg); background-size: 100%; background-repeat: no-repeat;">
             <div class="image">
-                <a href="produtos.php?tipo=Coleira"><h2 style="font-family: 'Bad Script', cursive; font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Acessórios</h2></a>
+                <a href="produtos.php?tipo=Coleira"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Coleiras</h2></a>
             </div>
+        </div>
+    </div>
+    <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%">
+        <div class="card" style="background-image: url(images/guias.jpg); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+                <a href="produtos.php?tipo=Guia"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white;">Guias</h2></a>
+            </div>
+        </div>
+
+        <div class="card"  style="background-image: url(images/peitoral.jpg); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+                <a href="produtos.php?tipo=Peitorais"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Peitorais</h2></a>
+            </div>
+        </div>
+
+        <div class="card" style="background-image: url(images/brinquedo.jpg); background-size: 100%; background-repeat: no-repeat;">
+            <div class="image">
+                <a href="produtos.php?tipo=Para Morder"><h2 style="font-size: 25px; color: black; margin-top: 98%; text-align: center; background-color: white">Brinquedos</h2></a>
+            </div>
+        </div>
+    </div>
+    <div class="ui three cards" style="margin-left: 5%; margin-right: 5%; margin-top: 5%;">
+        <div class="card" style="width: 100%;">
+            <img src="images/roupa.jpg" alt="" style="width: 100%; height: auto;">
+            <a href="produtos.php?tipo=Para Vestir"><h2 style="font-size: 25px; color: black; text-align: center; background-color: white; height: 50%;">Roupas</h2></a>
         </div>
     </div>
 
