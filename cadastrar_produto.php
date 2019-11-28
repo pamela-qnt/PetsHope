@@ -1,10 +1,18 @@
 <?php
 include("cabecalho.php");
+<<<<<<< HEAD
+=======
+require 'config.php';
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 
 if(isset($_POST['register'])) {
     $errMsg = '';
 
+<<<<<<< HEAD
     // Get data from FORM
+=======
+    // Get data from FROM
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
     $nome_produto = $_POST['nome_produto'];
     $qtd_estoque = $_POST['qtd_estoque'];
     $desc_produto = $_POST['desc_produto'];
@@ -79,7 +87,11 @@ if(isset($_POST['register'])) {
                         ':qtd_estoque' => $qtd_estoque,
                         ':desc_produto' => $desc_produto,
                         ':valor' => $valor,
+<<<<<<< HEAD
                         ':img_produto' => $target_file,
+=======
+                        ':img_produto' => $nome_arquivo,
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
                         ':id_tipo_prod_fk' => $id_tipo_prod
                     ));
                     header('Location: cadastrar_produto.php?action=joined');
@@ -102,7 +114,11 @@ if(isset($_POST['register'])) {
 }
 
 if(isset($_GET['action']) && $_GET['action'] == 'joined') {
+<<<<<<< HEAD
     print('<meta http-equiv="refresh" content="0;url=cadastrar_produto.php">');
+=======
+    print('<meta http-equiv="refresh" content="0;url=produtos.php">');
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 }
 
 if(isset($errMsg)){

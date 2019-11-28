@@ -2,6 +2,7 @@
 		require 'config.php';
 ?>
 <!DOCTYPE html>
+<<<<<<< HEAD
 	<html>
 		<head>
 
@@ -49,3 +50,46 @@
 			</div>
 		</div>
 	</div>  
+=======
+  <html>
+    <head>
+
+        <!-- LINK's NECESSÁRIOS --> 
+
+        <link rel="stylesheet" href="semantic.min.css" type="text/css">
+        <link rel="stylesheet" src="cabecalho.css" type="text/css"></link>
+
+        <link rel="sortcut icon" href="imagens/favicon.png" type="image/png"/>
+
+        <title> PetsHope </title>
+    </head>
+  <div>
+    <div>
+      <div class="ui container" style="margin-top: 1%;">
+      <div class="ui large gray menu">
+      
+        <a class="item" href="index.php">Home</a>
+        <a class="item" href="produtos.php">Produtos</a>
+        <a class="item">Adotar</a>
+        <div class="right menu">
+         <?php 
+                if(!isset($_SESSION['id_usuario'])){ 
+          ?>
+            <a class="item" href="cadastrar_usuario.php">Cadastre-se</a>
+            <a class="item" href="entrar.php">Entrar</a>
+
+         <?php
+                }else{
+            ?>
+                            <a class="item">Bem vindo(a) <?php echo $_SESSION['nome_usuario']?></a>
+                            <a href="" class="item">Carrinho</a>
+                            <a href="perfil.php" class="item">Perfil</a>  
+                            <a href="logout.php" class="item">Sair</a>
+            <?php
+                }
+            ?>
+        </div>
+      </div>
+    </div>
+  </div>  
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41

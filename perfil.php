@@ -1,5 +1,6 @@
 <?php
     include 'cabecalho.php';
+<<<<<<< HEAD
 
     $id_usuario = $_SESSION['id_usuario'];
     $nome_usuario = $_SESSION['nome_usuario'];
@@ -72,6 +73,27 @@
     }
 
     $sql = "SELECT campo1,campo2 FROM tabela WHERE campo2 IS NULL"
+=======
+  
+    // declaração de variáveis
+    $nome = $_SESSION['nome_usuario']; 
+    $email = $_SESSION['email'];
+    $senha = $_SESSION['senha'];
+    $id = $_SESSION['id_usuario'];
+
+    $con=mysqli_connect("localhost","root","","PetsHope");    
+
+    mysqli_query($con,"SELECT * FROM usuario");
+    
+
+    if(isset($_POST['editar'])) {
+
+    mysqli_query($con, "UPDATE usuario SET nome_usuario = '$nome', email = '$email', senha = '$senha'  WHERE id_usuario = '$id'");
+     
+  }    
+
+
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 ?>
 <!DOCTYPE html>
   <html lang="pt-br ">
@@ -99,11 +121,19 @@
     
    <div class="ui container" style="margin-top: 2%; "> 
     <div class="ui two collumn grid">
+<<<<<<< HEAD
       <div class="collumn" >
      <div class="ui link cards" >
   <div class="card" >
     <div class="image" >
       <img src="<?php echo $imagem_usuario;?>" >
+=======
+      <div class="collumn">
+     <div class="ui link cards">
+  <div class="card">
+    <div class="image">
+      <img src="images/neve.jpg">
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
     </div>
     <div class="content">
        
@@ -113,7 +143,11 @@
       <div class="item">
         <i class="user icon"></i>
         <div class="content">
+<<<<<<< HEAD
            <div class="header"><?php echo $id_tipo_usuario_fk ?></div>
+=======
+           <div class="header"><?php echo $nome; ?></div>
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
         </div>
       </div>
       <div class="item">
@@ -130,24 +164,43 @@
 </div>
 </div>
 <div class="collumn" style="width: 72%">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 <form class="ui form" action="perfil.php" method="post" >
    <h4 class="ui dividing header">Perfil Usuário</h4>
   <div class="field">
     <label>Nome Usuário</label>
     <div class="two fields">
+<<<<<<< HEAD
       <input type="text" name="nome_usuario" id="nome_usuario" value="<?php echo $nome_usuario; ?>">
+=======
+     <input type="text"
+           class="input_text"
+           name="nome_usuario" 
+           value=" <?php echo $nome; ?>" />
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
     </div>
   </div>
   <div class="field">
     <label>Email</label>
     <div class="fields">
+<<<<<<< HEAD
       <input type="text" name="email" id="email" value="<?php echo $email; ?>">
+=======
+      <input type="text"
+           class="input_text"
+           name="email" 
+           value=" <?php echo $email; ?>" />
+      
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
     </div>
   </div>
   <div class="field">
     <label>Senha</label>
     <div class="fields">
+<<<<<<< HEAD
       <input type="text" name="senha" id="senha" value="<?php echo $senha; ?>">      
     </div>
   </div>
@@ -164,6 +217,16 @@
       <div><label><b>Estado</b></label><input style="width: 167%" type="text" name="estado" id="estado" value="<?php echo $estado; ?>"></div>
     </div>
   </div>
+=======
+      <input type="text"
+           class="input_text"
+           name="senha" 
+           value=" <?php echo $senha; ?>" />      
+    </div>
+  </div>
+  <input class="ui button submit" type="submit" name="editar" value="Editar"></input>
+</form>
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 
   <input class="ui green button submit" type="submit" name="editar" value="Editar" action="editar"></input>
   <input class="ui  red button submit" type="submit" name="excluir" value="Excluir" action="excluir"></input>
@@ -188,3 +251,28 @@
 </head>
 <body>
 
+<<<<<<< HEAD
+=======
+</div>
+
+
+
+ 
+  </div>
+</div>  
+
+
+<?php include 'rodape.php' ?>
+
+</html>
+
+
+
+
+
+<html>
+<head>
+</head>
+<body>
+
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41

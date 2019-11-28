@@ -1,18 +1,21 @@
-Como fazer nosso projeto funcionar em outro computador:
+-- Geração de Modelo físico
+-- Sql ANSI 2003 - brModelo.
 
-Fazer download e extrair a pasta do trabalho em sua pasta public_html/htdocs;
-Abrir a pasta config.php e arrumar o usuÃ¡rio e senha do mysql;
-Criar uma base de dados com o nome de â€˜petsHopeâ€™ no phpMyAdmin;
-Inserir nessa base seguintes os dados:
+CREATE TABLE animal (
+id_animal int(11) PRIMARY KEY AUTO_INCREMENT,
+nome_animal varchar(50),
+sexo char(1)
+);
+
+CREATE TABLE especie_animal (
+id_animal int(11),
+desc_especie varchar(300),
+FOREIGN KEY(id_animal) REFERENCES animal (id_animal)
+);
 
 CREATE TABLE tipo_usuario (
 id_tipo_usuario int(11) PRIMARY KEY AUTO_INCREMENT, 
 desc_tipo_usuario varchar(50)
-);
-
-CREATE TABLE tipo_produto (
-id_tipo_prod int(11) PRIMARY KEY AUTO_INCREMENT,
-desc_tipo_prod varchar(50)
 );
 
 CREATE TABLE usuario (
@@ -21,21 +24,13 @@ nome_usuario varchar(100),
 email varchar(100),
 tel_contato int(11),
 senha varchar(50),
-estado varchar(200),
-cidade varchar(200),
-bairro varchar(200),
-desc_tipo_logradouto varchar(300),
 id_tipo_usuario int(11),
 FOREIGN KEY(id_tipo_usuario) REFERENCES tipo_usuario (id_tipo_usuario)
 );
 
-CREATE TABLE cartao_usuario (
-id_pagamento int(11) PRIMARY KEY AUTO_INCREMENT,
-id_usuario int(11),
-num_cartao int(20),
-nome_propri_cartao varchar(100),
-validade_cartao date, 
-FOREIGN KEY(id_usuario) REFERENCES usuario (id_usuario)
+CREATE TABLE tipo_produto (
+id_tipo_prod int(11) PRIMARY KEY AUTO_INCREMENT,
+desc_tipo_prod varchar(50)
 );
 
 CREATE TABLE produto (
@@ -45,8 +40,8 @@ qtd_estoque int(11),
 desc_produto varchar(300),
 valor decimal(10,2),
 img_produto varchar(200),
-id_tipo_prod int(11), 
-FOREIGN KEY(id_tipo_prod) REFERENCES tipo_produto (id_tipo_prod)
+id_tipo_prod_fk int(11), 
+FOREIGN KEY(id_tipo_prod_fk) REFERENCES tipo_produto (id_tipo_prod)
 );
 
 CREATE TABLE nf_compra (
@@ -84,8 +79,8 @@ insert into produto (nome_produto, valor, qtd_estoque, id_tipo_prod_fk) values
 ('Comedouro para cachorros Zee.Bowl Branco', 70.00, 4, 3);
 
 insert into usuario (nome_usuario, email, tel_contato, senha) values
-('Gabriel BÃ¡o', 'gabbao63oli@gmail.com', 984744159, 87654321),
-('AmÃ¡bile Kniss', 'amabilekniss1@gmail.com', 997363660, 76543210),
+('Gabriel Báo', 'gabbao63oli@gmail.com', 984744159, 87654321),
+('Amábile Kniss', 'amabilekniss1@gmail.com', 997363660, 76543210),
 ('Michael L. Deluna', 'MichaelLDeluna@armyspy.com', 25223344, 'iugh9Xoh'), 
 ('Carla Castro Alves', 'CarlaCastroAlves@teleworm.us', 51356843, 'iSaey9it'),
 ('Diogo Ribeiro Carvalho', 'DiogoRibeiroCarvalho@dayrep.com',  78696077, 'Eeb8JieG'),
@@ -125,5 +120,3 @@ insert into tipo_produto (desc_tipo_prod) values
 ('Para Vestir'),
 ('Camas'),
 ('Peitorais');
-
-

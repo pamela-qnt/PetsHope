@@ -15,6 +15,9 @@
 
         <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
 
+
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+
         <title> PetsHope </title>
     </head>
 
@@ -31,6 +34,7 @@
             <div class="ui large gray menu">
 
                 <a href="index.php" class="item">Home</a>
+<<<<<<< HEAD
             <?php
                 if (isset($_SESSION['id_tipo_usuario_fk']) && $_SESSION['id_tipo_usuario_fk'] == '2') {
             ?>
@@ -39,6 +43,10 @@
             <?php
                 }
             ?>
+=======
+                <a href="cadastrar_produto.php" class="item">Produtos</a>
+                <a class="item">Adotar</a>
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
                 <div class="right menu">
                     <?php
                         if(!isset($_SESSION['id_usuario'])){
@@ -49,9 +57,15 @@
 
                     <?php
                         }else{
+<<<<<<< HEAD
                     ?>
                             <a class="item">Bem vindo(a) <?php echo $_SESSION['nome_usuario']?></a>
                             <a href="carrinho.php" class="item">Carrinho</a>
+=======
+                    ?>  
+                            <a class="item">Bem vindo(a) <?php echo $_SESSION['nome_usuario']?></a>
+                            <a href="" class="item">Carrinho</a>
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
                             <a href="perfil.php" class="item">Perfil</a>  
                             <a href="logout.php" class="item">Sair</a>
                     <?php
@@ -76,12 +90,21 @@
         <div class="ui middle aligned stackable grid container">
             <div class="row">
                 <div class="eight wide column">
+<<<<<<< HEAD
                     <h2 class="ui header" style="font-size: 32px">Nossa motivação é a felicidade!</h2>
                     <h4>Nós da PetsHope sabemos como um animalzinho de estimação pode se tornar um melhor amigo e até um membro da família, afinal eles compartilham os momentos bons e ruins ao nosso lado. Pensando nisso, criamos uma marca que se preocupa com o bem estar dos pets e dos donos, mas sem deixar de lado a estética, sempre com qualidade e bom gosto.</h4>
                 </div>
                 <div class="six wide right floated column" >
                     <a href="produtos.php?tipo=Para Morder" class="ui medium image">
                         <img src="images/mordedor_xaman.webp" class="ui large bordered rounded image">
+=======
+                    <h2 class="ui header" style="font-size: 32px">Texto explicando o produto</h2>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit purus mattis, primis luctus curabitur metus mauris proin tempus massa himenaeos, montes quisque sociosqu consequat auctor sapien nam sem. Tempor sagittis suscipit eu erat aliquam sapien posuere finibus, dictum blandit enim dignissim class vivamus elit maximus cubilia, volutpat consequat euismod per pharetra lacus hac.</h4>
+                </div>
+                <div class="six wide right floated column" >
+                    <a href="https://google.com" class="ui medium image">
+                        <img src="images/brinquedos.jpg" class="ui large bordered rounded image">
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
                     </a>
                 </div>
             </div>

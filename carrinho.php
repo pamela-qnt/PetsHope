@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div style='background-color: #3b3b3b; padding-top: 1%; '>
 	<?php
 		include("cabecalho.php");
@@ -60,4 +61,13 @@ echo "</div>"; //fecha a div da primeira linha
 		?>
 <?php
 	include("rodape.php");
+=======
+<?php
+    include("cabecalho.php");
+    require "config.php";
+?>
+
+<?php
+    include("rodape.php");
+>>>>>>> 63af685f60b5bba47fdac5ff45cd501939787d41
 ?>
